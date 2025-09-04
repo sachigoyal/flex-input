@@ -4,12 +4,12 @@ import { useRef, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem } from "./ui/form";
-import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { ArrowUp, Loader2, Plus, X } from "lucide-react";
-import { ScrollArea } from "./ui/scroll-area";
-import { Dialog, DialogContent, DialogTitle } from "./ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -17,13 +17,14 @@ const formSchema = z.object({
   text: z.string().optional(),
 });
 
-export default function InputBox() {
+export function FlexInput() {
   const [isDragging, setIsDragging] = useState(false);
   const [images, setImages] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,7 +49,7 @@ export default function InputBox() {
     const items = event.clipboardData.items;
     const newImages: string[] = [];
 
-    for (let item of items) {
+    for (const item of items) {
       if (item.type.startsWith("image")) {
         const file = item.getAsFile();
         if (file) {
@@ -195,7 +196,7 @@ export default function InputBox() {
                     onKeyDown={handleKeyDown}
                     className="resize-none focus-visible:ring-0 border-none min-h-9 shadow-none px-1"
                     rows={1}
-                    placeholder="Enter your prompt here..."
+                    placeholder="Enter your prompt here"
                     {...field}
                   />
                 </FormControl>
@@ -206,7 +207,7 @@ export default function InputBox() {
             type="submit"
             variant="ghost"
             size="icon"
-            disabled={isSubmitting || form.watch("text") === ""}
+            disabled={isSubmitting || form.watch("text")?.trim() === ""}
             className="focus-visible:ring-0 disabled:!pointer-events-auto disabled:!cursor-not-allowed cursor-pointer"
           >
             {isSubmitting ? (
