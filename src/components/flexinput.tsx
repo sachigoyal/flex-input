@@ -194,7 +194,7 @@ export function FlexInput() {
                     autoFocus
                     onPaste={handlePaste}
                     onKeyDown={handleKeyDown}
-                    className="resize-none focus-visible:ring-0 border-none min-h-9 shadow-none px-1"
+                    className="resize-none focus-visible:ring-0 border-none min-h-9 shadow-none px-1 bg-transparent dark:bg-transparent"
                     rows={1}
                     placeholder="Enter your prompt here"
                     {...field}
