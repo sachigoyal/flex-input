@@ -2,7 +2,7 @@
 
 A modern React input component with text and image support, featuring drag & drop, clipboard integration, and form validation.
 
-![InputBox Demo](/public/input.png)
+![InputBox Demo](/public/og.png)
 
 ## ✨ Features
 
