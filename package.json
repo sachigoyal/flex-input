@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "registry:build": "shadcn build",
     "start": "next start",
     "lint": "eslint"
   },

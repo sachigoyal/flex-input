@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InputBox Component
 
-## Getting Started
+A modern React input component with text and image support, featuring drag & drop, clipboard integration, and form validation.
 
-First, run the development server:
+![InputBox Demo](/public/input.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 📝 **Text input** with Enter to submit, Shift+Enter for new lines
+- 🖼️ **Image upload** via file picker, drag & drop, or paste (Ctrl+V)
+- 🔍 **Image preview** modal with thumbnail management and full-screen view
+- ❌ **Individual image removal** with delete buttons
+- ✅ **Form validation** using react-hook-form and Zod
+- 🎨 **Modern UI** with loading states and responsive design
+- ♿ **Accessibility** with proper ARIA labels and keyboard navigation
+- 📱 **Mobile-friendly** with touch optimizations
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 15** with TypeScript
+- **react-hook-form** for form management
+- **Zod** for schema validation
+- **Tailwind CSS** for styling
+- **shadcn/ui** components
+- **Lucide React** icons

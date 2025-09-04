@@ -1,0 +1,11 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "flexinput",
+    "homepage": "https://acme.com",
+    "items": [
+      {
+        "name": "inputbox",
+        "path": "/components/inputbox"
+      }
+    ]
+  }
