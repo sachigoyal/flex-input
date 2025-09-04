@@ -54,7 +54,7 @@ export default function Installation() {
               variant="ghost"
               size="sm"
               className={cn(
-                "text-xs w-auto h-auto font-mono text-muted-foreground px-1 py-0.5 rounded border border-transparent",
+                "text-xs cursor-pointer w-auto h-auto font-mono text-muted-foreground px-1 py-0.5 rounded border border-transparent",
                 packageManager === pm && "border-foreground/20 text-foreground"
               )}
               onClick={() => handleClick(pm)}
@@ -83,7 +83,7 @@ export default function Installation() {
           </TooltipContent>
         </Tooltip>
       </div>
-      <div className="pl-3 py-2.5">
+      <div className="pl-3 py-2.5 text-left">
         <pre
           className="text-xs font-mono overflow-x-scroll"
           style={{ scrollbarWidth: "none" }}
